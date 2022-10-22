@@ -1,0 +1,22 @@
+--------------------PROGRAM STARTED--------------------
+Pop from empty stackin file stack.cpp  in function int stackPop(Stack*, Elem*) at line 713
+Error code (4) is not correct in file stack.cpp in function int stackPop(Stack*, Elem*) at line 713, 
+Pop from empty stackin file stack.cpp  in function int stackPop(Stack*, Elem*) at line 713
+Error code (4) is not correct in file stack.cpp in function int stackPop(Stack*, Elem*) at line 713, 
+Pop from empty stackin file stack.cpp  in function int stackPop(Stack*, Elem*) at line 713
+Error code (4) is not correct in file stack.cpp in function int stackPop(Stack*, Elem*) at line 713, 
+Pop from empty stackin file stack.cpp  in function int stackPop(Stack*, Elem*) at line 713
+Error code (4) is not correct in file stack.cpp in function int stackPop(Stack*, Elem*) at line 713, 
+Pop from empty stackin file stack.cpp  in function int stackPop(Stack*, Elem*) at line 713
+Error code (4) is not correct in file stack.cpp in function int stackPop(Stack*, Elem*) at line 713, 
+Pop from empty stackin file stack.cpp  in function int stackPop(Stack*, Elem*) at line 713
+Error code (4) is not correct in file stack.cpp in function int stackPop(Stack*, Elem*) at line 713, 
+Pop from empty stackin file stack.cpp  in function int stackPop(Stack*, Elem*) at line 713
+Error code (4) is not correct in file stack.cpp in function int stackPop(Stack*, Elem*) at line 713, 
+Pop from empty stackin file stack.cpp  in function int stackPop(Stack*, Elem*) at line 713
+Error code (4) is not correct in file stack.cpp in function int stackPop(Stack*, Elem*) at line 713, 
+Pop from empty stackin file stack.cpp  in function int stackPop(Stack*, Elem*) at line 713
+Error code (4) is not correct in file stack.cpp in function int stackPop(Stack*, Elem*) at line 713, 
+Pop from empty stackin file stack.cpp  in function int stackPop(Stack*, Elem*) at line 713
+Error code (4) is not correct in file stack.cpp in function int stackPop(Stack*, Elem*) at line 713, 
+-----------------------PROGRAM END------------------------

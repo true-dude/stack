@@ -1,0 +1,1760 @@
+--------------------DUMPING STARTED--------------------
+-----------------------DUMPING END------------------------
+At int stackDtor(Stack*) at stack.cpp(611):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 6 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000178]
+	{
+		* 9
+		* 9
+		* 9
+		* 9
+		* 9
+		* 9
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(697):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 6 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000178]
+	{
+		* 9
+		* 9
+		* 9
+		* 9
+		* 9
+		* 9
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(677):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 5 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000178]
+	{
+		* 9
+		* 9
+		* 9
+		* 9
+		* 9
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(697):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 5 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000178]
+	{
+		* 9
+		* 9
+		* 9
+		* 9
+		* 9
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackResize(Stack*, size_t) at stack.cpp(666):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 4 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000178]
+	{
+		* 9
+		* 9
+		* 9
+		* 9
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackResize(Stack*, size_t) at stack.cpp(634):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 4 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		* 9
+		* 9
+		* 9
+		* 9
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(677):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 4 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		* 9
+		* 9
+		* 9
+		* 9
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(697):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 4 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		* 9
+		* 9
+		* 9
+		* 9
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(677):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 3 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		* 9
+		* 9
+		* 9
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(697):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 3 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		* 9
+		* 9
+		* 9
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(677):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 2 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		* 9
+		* 9
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(697):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 2 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		* 9
+		* 9
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(677):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 1 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		* 9
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(697):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 1 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		* 9
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(677):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 0 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 0 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 0 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 0 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 0 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 0 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 0 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 0 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 0 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 0 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 0 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(742):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 0 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 1 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(742):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 1 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 2 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(742):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 2 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 3 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		* 7
+		* 7
+		* 7
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(742):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 3 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		* 7
+		* 7
+		* 7
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 4 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(742):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 4 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+	}
+
+
+---------------------------------------------------------------
+
+At int stackResize(Stack*, size_t) at stack.cpp(666):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 4 
+	capacity = 4 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x604000000018]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+	}
+
+
+---------------------------------------------------------------
+
+At int stackResize(Stack*, size_t) at stack.cpp(634):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 4 
+	capacity = 16 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x60d000000048]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 5 
+	capacity = 16 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x60d000000048]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(742):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 5 
+	capacity = 16 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x60d000000048]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 6 
+	capacity = 16 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x60d000000048]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(742):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 6 
+	capacity = 16 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x60d000000048]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 7 
+	capacity = 16 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x60d000000048]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(742):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 7 
+	capacity = 16 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x60d000000048]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 8 
+	capacity = 16 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x60d000000048]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(742):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 8 
+	capacity = 16 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x60d000000048]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 9 
+	capacity = 16 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x60d000000048]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(742):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 9 
+	capacity = 16 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x60d000000048]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPop(Stack*, Elem*) at stack.cpp(707):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 10 
+	capacity = 16 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x60d000000048]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(697):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 10 
+	capacity = 16 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x60d000000048]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(677):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 9 
+	capacity = 16 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x60d000000048]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(697):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 9 
+	capacity = 16 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x60d000000048]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackResize(Stack*, size_t) at stack.cpp(666):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 8 
+	capacity = 16 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x60d000000048]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackResize(Stack*, size_t) at stack.cpp(634):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 8 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(677):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 8 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(697):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 8 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(677):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 7 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(697):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 7 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(677):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 6 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(697):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 6 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(677):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 5 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(697):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 5 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(677):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 4 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(697):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 4 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		* 7
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(677):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 3 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(697):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 3 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		* 7
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(677):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 2 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(697):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 2 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		* 7
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(677):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 1 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(697):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 1 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		* 7
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int stackPush(Stack*, Elem) at stack.cpp(677):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 0 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
+At int _stackCtor(Stack*, size_t, const char*, const char*, int, const char*) at stack.cpp(601):
+This stack (&stk1) was born in stack.cpp in int main() at 765 line
+stack[0x7ffd959a1ea0] (ok) 
+{
+	size     = 0 
+	capacity = 8 
+	stack.LEFT_CANARY = dadadada
+	stack.RIGHT_CANARY = fefefefe
+	data.LEFT_CANARY = dadadada
+	data.RIGHT_CANARY = fefefefe
+	data[0x607000000108]
+	{
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+		 dddddddd
+	}
+
+
+---------------------------------------------------------------
+
