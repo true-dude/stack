@@ -1,6 +1,11 @@
 #ifndef H_STACK
 #define H_STACK
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <string.h>
+
 #define LOGGING
 #define STACK_DUMPING
 #define SUPER_STACK_DUMPING
@@ -8,12 +13,13 @@
 
 #define LOCATION __FILE__, __LINE__, __PRETTY_FUNCTION__
 
-#define stackCtor(stk, capacity)                                      \
+#define stackCtor(stk, capacity)                       \
 _stackCtor(stk, capacity, #stk, LOCATION)
+
 
 #ifdef LOGGING
 
-    #define log_error(error)                                           \
+    #define log_error(error)                            \
            _log_error(error, LOCATION)
 
     #define log_func(error) _log_func(error, __PRETTY_FUNCTION__, __LINE__)
@@ -24,17 +30,16 @@ _stackCtor(stk, capacity, #stk, LOCATION)
 
 #endif
 
+
 #ifdef STACK_DUMPING  
                                                                             
-    #define ASSERT_STK(stk, error)                                          \
-        /*printf("error = %d \n", stackError(stk));*/                           \
-        error = stackError(stk);                                            \
-        if (error)                                                          \
-        {                                                                  \
-            printf("O_O err = %d\n", error);                                                            \
-            stackDump(stk, error, LOCATION);                                \
-                                                                            \
-            return error;                                                   \
+    #define ASSERT_STK(stk, error)                      \
+        error = stackError(stk);                        \
+        if (error)                                      \
+        {                                               \
+            stackDump(stk, error, LOCATION);            \
+                                                        \
+            return error;                               \
         } 
 
 #else
@@ -44,13 +49,14 @@ _stackCtor(stk, capacity, #stk, LOCATION)
     if (error)                                          \
     {                                                   \
                                                         \
-        log_error(error);  \
+        log_error(error);                               \
         return error;                                   \
                                                         \
     }                                                   
 
 
 #endif
+
 
 #ifdef SUPER_STACK_DUMPING
 
@@ -75,9 +81,6 @@ const int coef_size_up      = 2;
 const int min_size_capacity = 8;
 
 
-
-
-
 #ifdef STACK_DUMPING
 
     typedef struct _VarInfo
@@ -92,8 +95,6 @@ const int min_size_capacity = 8;
     } VarInfo;
 
 #endif
-
-
 
 
 enum FUNC_ERRORS {
@@ -122,8 +123,6 @@ enum STACK_ERORRS {
     DATA_R_CANARY_INCORRECT       = 11,
     
 };
-
-const int NUM_OF_ERRORS = 12;
 
 enum POISON_VALS {
 
@@ -170,24 +169,44 @@ typedef struct _Stack
 } Stack;
 
 
-int openLogFile  (const char* log_file_name);
-int openDumpFile (const char* log_file_name);
+const int NUM_OF_ERRORS = 12;
 
 
+int openLogFile   ();
+void closeLogFile ();
 
 
+int openDumpFile   ();
+void closeDumpFile ();
 
 
+int _stackCtor  (Stack* stk, size_t capacity, const char* stk_name,
+                                              const char* stk_file, 
+                                              int stk_line, 
+                                              const char* stk_func);
+int stackDtor   (Stack* stk);
+int stackPush   (Stack* stk, Elem value);
+int stackPop    (Stack* stk, Elem* val);
+int stackResize (Stack* stk, size_t new_size);
 
 
-int _stackCtor(Stack* stk, size_t capacity, const char* stk_name,
-                                            const char* stk_file, 
-                                            int stk_line, 
-                                            const char* stk_func);
-int stackDtor(Stack* stk);
-int stackPush(Stack* stk, Elem value);
-int stackPop(Stack* stk, Elem* val);
-int stackResize(Stack* stk, size_t new_size);
+void _log_func  (int error, const char* func_name, int line);
+void _log_error (int error, const char* file_name, int line, const char* func_name);
+
+
+void set_error_bit  (int* error, int bit_number);
+int checkPoisonElem (void* _elem, size_t elem_size, int is_poison, unsigned char correct_poison);
+int stackError      (Stack* stk);
+
+
+void fprintStackErrors (FILE* fp, int error, const char** error_messages);
+void fprintElementBits (FILE* fp, void* ptr, size_t size);
+
+
+int stackDump          (Stack* stk, int error, const char* file, int line, const char* function);
+
+
+void fillPoison        (void* ptr_1st_poison, size_t elem_size, size_t left, size_t right, unsigned char poison_val);
 
 
 #endif

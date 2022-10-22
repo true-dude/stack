@@ -1,9 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <assert.h>
-#include <string.h>
 #include "stack.h"
-//#include "ASSERT_STK.h"
+
 
 const char log_file_name[]  = "log.txt";
 const char dump_file_name[] = "dump.txt";
@@ -12,13 +8,13 @@ FILE* dump_file             = NULL;
 
 #ifdef LOGGING
 
-    int OPEN_LOG_FILE = openLogFile(log_file_name);
+    int OPEN_LOG_FILE = openLogFile();
 
 #endif
 
 #ifdef STACK_DUMPING
 
-    int OPEN_DUMP_FILE = openDumpFile(dump_file_name);
+    int OPEN_DUMP_FILE = openDumpFile();
 
 #endif
 
@@ -51,7 +47,7 @@ void closeLogFile()
     fclose(log_file);
 }
 
-int openLogFile(const char* log_file_name)
+int openLogFile()
 {
     log_file = fopen(log_file_name, "w");
     assert(log_file != NULL);
@@ -76,7 +72,7 @@ void closeDumpFile()
     fclose(dump_file);
 }
 
-int openDumpFile(const char* log_file_name)
+int openDumpFile()
 {
     dump_file = fopen(dump_file_name, "w");
     assert(dump_file != NULL);
@@ -126,6 +122,7 @@ void _log_error(int error, const char* file_name, int line, const char* func_nam
 
         case POP_FROM_EMTY_STACK:
             fprintf(log_file, "Pop from empty stackin file %s  in function %s at line %d\n", file_name, func_name, line);
+            break;
             
 
         default:
@@ -151,7 +148,7 @@ int checkPoisonElem(void* _elem, size_t elem_size, int is_poison, unsigned char 
     {
 
         int correct = is_poison ? elem[coun] == correct_poison :
-                             elem[coun] != correct_poison;
+                                  elem[coun] != correct_poison;
 
         if (!correct)
             return 0;
@@ -178,19 +175,19 @@ int stackError(Stack* stk)
 
     if ((int) stk->capacity > 0)
     {
-        //printf("%d\n", stk->capacity);
+        
         for (size_t coun = 0; coun < stk->size; coun++)
         {
 
             if (!checkPoisonElem(stk->data + coun, sizeof(Elem), 0, (unsigned char) POISON_ELEM))
             {
-                //sprintf("%d\n", coun);
+                
                 set_error_bit(&error, ACTIVE_ELEM_IS_POISON);
 
             }
 
         }
-        //printf("stk_size = %lu\n", stk->size);
+        
         for (size_t coun = stk->size; coun < stk->capacity; coun++)
         {
 
@@ -206,14 +203,12 @@ int stackError(Stack* stk)
     }
 
     #ifdef CANARY_PROTECT
-        printf("check1 %x\n", *((Canary*) stk->data));
-        printf("check2 %x\n", *((Canary*) (stk->data + stk->capacity)));
 
         if (stk->left_canary  != LEFT_CANARY)  set_error_bit(&error, STACK_L_CANARY_INCORRECT);
         if (stk->right_canary != RIGHT_CANARY) set_error_bit(&error, STACK_R_CANARY_INCORRECT);
 
         if (*((Canary*)  ((char*)  stk->data - sizeof(Canary))) != LEFT_CANARY)  set_error_bit(&error, DATA_L_CANARY_INCORRECT);
-        if (*((Canary*)  ((char*) (stk->data + stk->capacity)))     != RIGHT_CANARY) set_error_bit(&error, DATA_R_CANARY_INCORRECT);
+        if (*((Canary*)  ((char*) (stk->data + stk->capacity))) != RIGHT_CANARY) set_error_bit(&error, DATA_R_CANARY_INCORRECT);
 
 
     #endif
@@ -229,7 +224,9 @@ void fprintStackErrors(FILE* fp, int error, const char** error_messages)
     {
         if (error & (1 << i))
         {
+
             fprintf(fp, "ERROR: %s\n", error_messages[i]);
+        
         }
     }
 
@@ -240,8 +237,8 @@ void fprintElementBits(FILE* fp, void* ptr, size_t size)
 
     for (size_t i = 0; i < size; i++)
     {
-        //printf("%lu\n", i);
-        fprintf(fp, "%x", *((((char*) ptr) + i)));
+
+        fprintf(fp, "%x", *((((unsigned char*) ptr) + i)));
 
     }
 
@@ -251,19 +248,16 @@ void fprintElementBits(FILE* fp, void* ptr, size_t size)
 
 int stackDump(Stack* stk, int error, const char* file, int line, const char* function)
 {
-    //printf("Dump %d\n", error);
     
-
-    //printf("DUMPPP@@\n");
-
     fprintf(dump_file, "At %s at %s(%d):\n", function, file, line);
 
     fprintf(dump_file, "This stack (%s) was born in %s in %s at %d line\n", stk->info.var_name, stk->info.file_name, stk->info.func_name, stk->info.line);
     
     if (error != 0)
     {
-        //printf("printfError\n");
+        
         fprintStackErrors(dump_file, error, stack_error_messages);
+    
     }
 
     fprintf(dump_file, "stack[%p] (%s) \n{\n\tsize     = %lu \n\tcapacity = %lu \n",
@@ -271,10 +265,10 @@ int stackDump(Stack* stk, int error, const char* file, int line, const char* fun
     
     #ifdef CANARY_PROTECT
 
-        fprintf(dump_file, "\tstack.LEFT_CANARY = %x\n\tstack.RIGHT_CANARY = %x\n",
+        fprintf(dump_file, "\tstack.LEFT_CANARY = %llx\n\tstack.RIGHT_CANARY = %llx\n",
                                                 stk->left_canary,         stk->right_canary);
 
-        fprintf(dump_file, "\tdata.LEFT_CANARY = %x\n\tdata.RIGHT_CANARY = %x\n",
+        fprintf(dump_file, "\tdata.LEFT_CANARY = %llx\n\tdata.RIGHT_CANARY = %llx\n",
                                                *((Canary*) ((char*) stk->data - sizeof(Canary))),
                                                                         *((Canary*) ((char*) (stk->data + stk->capacity))));
 
@@ -295,7 +289,7 @@ int stackDump(Stack* stk, int error, const char* file, int line, const char* fun
         }
         else
         {
-            //printf("p1 = %x v1 = %X\n", &stk->data[i], stk->data[i]);
+            
             fprintf(dump_file, "\t\t ");
             fprintElementBits(dump_file, &stk->data[i], sizeof(Elem));
 
@@ -318,15 +312,8 @@ void fillPoison(void* ptr_1st_poison, size_t elem_size, size_t left, size_t righ
 
     assert(ptr_1st_poison != NULL);
 
-    //memset((char*) ptr_1st_poison + left * elem_size, (unsigned char) poison_val, elem_size * (right - left));
+    memset((char*) ptr_1st_poison + left * elem_size, poison_val, elem_size * (right - left));
     
-    for (size_t idx = left * elem_size; idx < right * elem_size; idx++)
-    {
-
-        //printf("ptr = %x\n", (char*) ptr_1st_poison + idx);
-        *((char*) ptr_1st_poison + idx) = poison_val; 
-        //printf("val == %x\n", *((char*) ptr_1st_poison + idx));
-    }
 }
 
 
@@ -335,11 +322,8 @@ int _stackCtor(Stack* stk, size_t capacity, const char* stk_name,
                                             int stk_line, 
                                             const char* stk_func)
 {
-    printf("dcsd\n");
-    int error = 0;
 
-    //ASSERT_STK(stk, error);
-    //STACK_DUMP(stk, error);
+    int error = 0;
 
     size_t new_capacity = 1;
     
@@ -359,17 +343,12 @@ int _stackCtor(Stack* stk, size_t capacity, const char* stk_name,
         }
     }
 
-    printf("capacccity = %d\n", new_capacity);
-
     
     #ifdef CANARY_PROTECT
 
         stk->left_canary  = LEFT_CANARY;
         stk->right_canary = RIGHT_CANARY;
 
-        printf("uvu = %lu\n", new_capacity * sizeof(Elem) + 2 * sizeof(Canary));
-
-        printf("new cap = %llu\n", new_capacity);
 
         stk->data = (Elem*) calloc(new_capacity * sizeof(Elem) + 2 * sizeof(Canary), 1);
 
@@ -381,25 +360,11 @@ int _stackCtor(Stack* stk, size_t capacity, const char* stk_name,
 
         }
 
-        fprintElementBits(stdout, stk->data, sizeof(Canary));
-
         ((Canary*) stk->data) [0] = LEFT_CANARY;
-
-        printf("UWU %x\n", *((Canary*) stk->data));
-
-        fprintElementBits(stdout, stk->data, sizeof(Canary));
-
-        printf("nc + sc = %lu\n", new_capacity + sizeof(Canary));
         
         stk->data = (Elem*) ((char*) stk->data + sizeof(Canary));
-        
-        fprintElementBits(stdout, stk->data + new_capacity, sizeof(Canary));
 
         ((Canary*) (stk->data + new_capacity)) [0] = RIGHT_CANARY;
-
-        printf("III %x\n", *((Canary*) (stk->data + new_capacity)));
-    
-        fprintElementBits(stdout, stk->data + new_capacity, sizeof(Canary));
 
     #else
 
@@ -429,8 +394,6 @@ int _stackCtor(Stack* stk, size_t capacity, const char* stk_name,
 
     #endif
 
-    printf("AWA %x\n", *((Canary*) stk->data));
-    printf("LML %x\n", *((Canary*) (stk->data + new_capacity)));
     
     ASSERT_STK(stk, error);
     STACK_DUMP(stk, error);
@@ -467,15 +430,11 @@ int stackResize(Stack* stk, size_t new_size)
 
     ASSERT_STK(stk, error);
     STACK_DUMP(stk, error);
-
-    //printf("YTYTYTY\n");
     
 
     #ifdef CANARY_PROTECT
 
         stk->data = (Elem*) ((char*) stk->data - sizeof(Canary));
-
-        //printf("EUEUE\n");
 
         stk->data = (Elem*) realloc(stk->data, new_size * sizeof(Elem) + 2 * sizeof(Canary));
 
@@ -569,8 +528,6 @@ int stackPop(Stack* stk, Elem* val)
     }
 
 
-    //printf("I TUTA!!\n");
-    //printf("I ZDESSS!!\n");
     error |= stackError(stk);
 
     ASSERT_STK(stk, error);
