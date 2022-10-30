@@ -10,6 +10,7 @@
 #define STACK_DUMPING
 #define SUPER_STACK_DUMPING
 #define CANARY_PROTECT
+#define HASH_PROTECT
 
 #define LOCATION __FILE__, __LINE__, __PRETTY_FUNCTION__
 
@@ -39,7 +40,7 @@ _stackCtor(stk, capacity, #stk, LOCATION)
         {                                               \
             stackDump(stk, error, LOCATION);            \
                                                         \
-            return error;                               \
+            return STACK_ERROR;                         \
         } 
 
 #else
@@ -75,6 +76,22 @@ _stackCtor(stk, capacity, #stk, LOCATION)
 
 #endif
 
+
+#ifdef HASH_PROTECT
+
+    typedef unsigned long long int Hash;
+
+    #define DEF_HASH ((Hash) 0xd1e3f5a7b9c1d3e5f7)
+
+    #define RECALC_STACK_HASH(stk) recalcStackHash(stk)
+
+#else
+
+    define RECALC_STACK_HASH(stk)
+
+#endif
+
+
 typedef double Elem;
 
 const int coef_size_up      = 2;
@@ -97,17 +114,18 @@ const int min_size_capacity = 8;
 #endif
 
 
-enum FUNC_ERRORS {
+typedef enum RETURN_CODE {
 
     SUCCES                        = 0,
     MEMORY_ERROR                  = 1,
     BAD_ARGS_ERROR                = 2,
     FILE_ERROR                    = 3,
-    POP_FROM_EMTY_STACK           = 4,
+    STACK_ERROR                   = 4,
 
-};
+} ReturnCode;
 
-enum STACK_ERORRS {
+
+typedef enum STACK_ERRORS {
 
     STK_OK                        = 0,
     STK_PTR_ERROR                 = 1,
@@ -121,8 +139,12 @@ enum STACK_ERORRS {
     STACK_R_CANARY_INCORRECT      = 9,
     DATA_L_CANARY_INCORRECT       = 10,
     DATA_R_CANARY_INCORRECT       = 11,
+    BAD_HASH                      = 12,
     
-};
+} StackError;
+
+typedef int StackErrorSet;
+
 
 enum POISON_VALS {
 
@@ -131,6 +153,7 @@ enum POISON_VALS {
     POISON_CAPACITY = -1
 
 };
+
 
 enum Protect {
 
@@ -143,7 +166,7 @@ typedef struct _Stack
 {
     #ifdef CANARY_PROTECT
 
-    Canary left_canary = LEFT_CANARY;
+        Canary left_canary = LEFT_CANARY;
 
     #endif
 
@@ -154,17 +177,26 @@ typedef struct _Stack
 
     char is_ctor = 0;
 
+    
     #ifdef STACK_DUMPING
 
-    VarInfo info;
+        VarInfo info;
 
     #endif
 
+    
+    #ifdef HASH_PROTECT
+
+        Hash hash = 0;
+
+    #endif
+
+    
     #ifdef CANARY_PROTECT
 
-    Canary right_canary = RIGHT_CANARY;
+        Canary right_canary = RIGHT_CANARY;
 
-    #endif
+     #endif
 
 } Stack;
 
@@ -180,23 +212,27 @@ int openDumpFile   ();
 void closeDumpFile ();
 
 
-int _stackCtor  (Stack* stk, size_t capacity, const char* stk_name,
+ReturnCode _stackCtor  (Stack* stk, size_t capacity, const char* stk_name,
                                               const char* stk_file, 
                                               int stk_line, 
                                               const char* stk_func);
-int stackDtor   (Stack* stk);
-int stackPush   (Stack* stk, Elem value);
-int stackPop    (Stack* stk, Elem* val);
-int stackResize (Stack* stk, size_t new_size);
+ReturnCode stackDtor   (Stack* stk);
+ReturnCode stackPush   (Stack* stk, Elem value);
+ReturnCode stackPop    (Stack* stk, Elem* val);
+ReturnCode stackResize (Stack* stk, size_t new_size);
 
 
 void _log_func  (int error, const char* func_name, int line);
 void _log_error (int error, const char* file_name, int line, const char* func_name);
 
 
-void set_error_bit  (int* error, int bit_number);
-int checkPoisonElem (void* _elem, size_t elem_size, int is_poison, unsigned char correct_poison);
-int stackError      (Stack* stk);
+void          set_error_bit   (StackErrorSet* error, int bit_number);
+int           checkPoisonElem (void* _elem, size_t elem_size, int is_poison, unsigned char correct_poison);
+StackErrorSet stackError      (Stack* stk);
+
+
+Hash hash13(void* _data, size_t size);
+void recalcStackHash(Stack* stk);
 
 
 void fprintStackErrors (FILE* fp, int error, const char** error_messages);

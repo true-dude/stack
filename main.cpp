@@ -10,6 +10,9 @@ int main()
     for (int i = 0; i < 100; i++)
     {
         stackPush(&stk1, 7);
+        printf("OU SHIT\n");
+
+        stk1.data[0] = 13;
     }
 
     for (int i = 0; i < 200; i++)
